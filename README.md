@@ -83,7 +83,6 @@ If using XAMPP, move it to the `htdocs` folder:
 ### 4. Configure Database Connection
 Edit `db.php`:
 ```php
-<?php
 $host = "localhost";
 $user = "root";
 $pass = "";
@@ -93,7 +92,6 @@ $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-?>
 ```
 
 ### 5. Configure PHPMailer (Optional)
