@@ -116,7 +116,7 @@ $razorpaySecret = 'YourrazorpaySecret';
 ---
 
 ## Usage
-
+run  http://localhost/event_management_system
 ### 👤 User Side
 - Visit the homepage to **browse events**.
 - Use **AJAX-powered filters** to search by category, venue, date, or time.
