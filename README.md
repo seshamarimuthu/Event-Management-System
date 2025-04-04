@@ -108,6 +108,12 @@ $mailerName = 'Your Name';
 
 ### 6. Configure Payment Gateway
 Set your credentials in the respective payment config file ( `book.php`).
+```php
+
+$razorpayApiKey = 'YourrazorpayApiKey';  
+$razorpaySecret = 'YourrazorpaySecret'; 
+
+```
 
 ---
 
