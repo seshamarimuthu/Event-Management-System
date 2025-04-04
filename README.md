@@ -73,7 +73,7 @@ git clone https://github.com/seshamarimuthu/event-management-system.git
 ### 2. Move Project to Server Directory
 If using XAMPP, move it to the `htdocs` folder:
 ```
-/xampp/htdocs/event-management-system
+/xampp/htdocs/event_management_system
 ```
 
 ### 3. Create the Database
