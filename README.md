@@ -78,41 +78,56 @@ If using XAMPP, move it to the `htdocs` folder:
 
 ### 3. Create the Database
 - Open **phpMyAdmin**
-- Create a new database: `event_management`
+- Create a new database: `events_db`
 - Import the SQL file located in `/sql/` folder
 
 ### 4. Configure Database Connection
-Edit `config.php`:
+Edit `db.php`:
 ```php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "event_management";
-$conn = new mysqli($servername, $username, $password, $database);
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "events_db";
+
+$conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+?>
 ```
 
 ### 5. Configure PHPMailer (Optional)
-In `mailer_config.php` or wherever used:
+In `book.php`:
 ```php
-$mail->Username = 'your_email@example.com';
-$mail->Password = 'your_password';
-$mail->setFrom('your_email@example.com', 'Your Name');
+
+$mailerEmail ='your_email@example.com'; 
+$mailerPassword ='your_password';   
+$mailerName = 'Your Name';
+
 ```
 
 ### 6. Configure Payment Gateway
-Set your credentials in the respective payment config file (e.g., `stripe_config.php` or `paypal_config.php`).
+Set your credentials in the respective payment config file ( `book.php`).
 
 ---
 
 ## Usage
 
-- **Register/Login** as a user.
-- **Browse & Filter Events** on the home page.
-- **Book an Event** → Redirects to payment → Email confirmation sent.
-- **Admin Panel**: Login to `/admin` to create, edit, and manage events/bookings.
+### 👤 User Side
+- Visit the homepage to **browse events**.
+- Use **AJAX-powered filters** to search by category, venue, date, or time.
+- **Register/Login** to your account to enable booking.
+- Choose an event and proceed to **book** it.
+- Complete payment through the integrated gateway.
+- Receive a **confirmation email** with all event details after successful booking.
+
+### 🛠️ Admin Side
+- Login as Admin via the **admin panel** (`/admin`).
+- **Create and manage events**, including:
+  - Name, description, slots, price, time/date, venue, and category.
+- **View and manage bookings** made by users.
+- **Access customer details** for each booking.
 
 ---
 
