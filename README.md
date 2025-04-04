@@ -117,6 +117,11 @@ $razorpaySecret = 'YourrazorpaySecret';
 
 ## Usage
 run  http://localhost/event_management_system
+
+- **Register** a new user:
+  - If it’s the first registration, the user will be stored as `usertype = "admin"`.
+  - All subsequent users will be stored as `usertype = "customer"`.
+
 ### 👤 User Side
 - Visit the homepage to **browse events**.
 - Use **AJAX-powered filters** to search by category, venue, date, or time.
