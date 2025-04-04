@@ -48,7 +48,7 @@ This is a complete Event Management System built with PHP and MySQL. It provides
 - MySQL (Database)
 - JavaScript & AJAX (Frontend Filtering)
 - PHPMailer (Email Confirmation)
-- Payment Gateway (e.g., Stripe/PayPal)
+- Payment Gateway (Razorpay)
 - HTML/CSS (Frontend UI)
 
 ---
@@ -78,8 +78,7 @@ If using XAMPP, move it to the `htdocs` folder:
 
 ### 3. Create the Database
 - Open **phpMyAdmin**
-- Create a new database: `events_db`
-- Import the SQL file located in `/sql/` folder
+- Import the SQL file  `/events_db.sql/`
 
 ### 4. Configure Database Connection
 Edit `db.php`:
@@ -98,7 +97,7 @@ if ($conn->connect_error) {
 ```
 
 ### 5. Configure PHPMailer (Optional)
-In `book.php`:
+if you change your domain email credentials, update the following in the /event-management-system/frontend/book.php file:
 ```php
 
 $mailerEmail ='your_email@example.com'; 
